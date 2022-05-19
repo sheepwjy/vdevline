@@ -2,16 +2,25 @@ package com.vdevline.model;
 
 public class User {
 
+    private Integer id;
     private String name;
-    private Integer age;
+    private String desc;
 
     public User(){
 
     }
 
-    public User(String name, Integer age) {
+    public User(Integer id, String name) {
+        this.id = id;
         this.name = name;
-        this.age = age;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -22,11 +31,11 @@ public class User {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

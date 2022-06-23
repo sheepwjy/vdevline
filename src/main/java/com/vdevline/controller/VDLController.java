@@ -1,8 +1,10 @@
 package com.vdevline.controller;
 
+import com.vdevline.model.Result;
 import com.vdevline.model.User;
 import com.vdevline.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,10 +18,16 @@ public class VDLController {
     @Autowired
     UserService userService;
 
+    @RequestMapping("/api/getpv")
+    Result getPageView(@RequestParam(value="page_id") String pageId) {
+        return null;
+    }
+
+
     @RequestMapping("/api/get")
     User getUser(@RequestParam(value="id", defaultValue="1") Integer id) {
         User user = userService.get(id);
-        System.out.println("测试1122");
+        System.out.println("测试123");
         return user;
     }
 

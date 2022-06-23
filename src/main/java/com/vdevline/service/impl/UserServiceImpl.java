@@ -13,7 +13,7 @@ import java.sql.Types;
 import java.util.List;
 import java.util.Map;
 
-@Service
+@Service("abc1")
 public class UserServiceImpl implements UserService {
 
     @Autowired
